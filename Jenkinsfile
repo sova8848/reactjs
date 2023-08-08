@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'lsb_release -a'
+                sh 'yum install nodejs'
                 sh 'npm install'
                 sh 'pwd'
                 sh 'ifconfig'
