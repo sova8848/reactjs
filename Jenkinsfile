@@ -2,14 +2,13 @@ pipeline {
 
     
     agent any
+    tools {nodejs "node"}
      environment {
             CI = 'true'
         }
     stages {
         stage('Build') {
             steps {
-                sh 'sudo su'
-                sh 'yum install nodejs'
                 sh 'npm install'
                 sh 'pwd'
                 sh 'ifconfig'
