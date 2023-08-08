@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'sudo su'
                 sh 'yum install nodejs'
                 sh 'npm install'
                 sh 'pwd'
