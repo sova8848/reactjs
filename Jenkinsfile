@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'pwd'
+                sh 'curl ifconfig.me'
             }
         }
         stage('Test') {
