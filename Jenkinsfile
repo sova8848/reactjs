@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apt-get install npm'
+                sh 'lsb_release -a'
                 sh 'npm install'
                 sh 'pwd'
                 sh 'ifconfig'
