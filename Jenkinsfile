@@ -1,30 +1,38 @@
 pipeline {
-    agent any
-    environment {
-        CI = 'true'
+
+    
+    agent {
+        docker {
+            image 'node:6-alpine'
+            args '-p 3000:3000'
+            args '-u root:root'
+        }
     }
+     environment {
+            CI = 'true'
+        }
     stages {
         stage('Build') {
             steps {
                 sh 'npm install'
                 sh 'pwd'
-                sh 'curl ifconfig.me'
             }
         }
         stage('Test') {
-            steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/scripts/test.sh'
-                sh 'pwd'
-            }
-        }
-        stage('Deliver') {
-            steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
-            }
-        }
+                    steps {
+                        sh "chmod +x -R ${env.WORKSPACE}"
+                        sh './jenkins/scripts/test.sh'
+                    }
+                }
+                stage('Deliver') {
+                            steps {
+                                sh "chmod +x -R ${env.WORKSPACE}"
+                                sh './jenkins/scripts/deliver.sh'
+                                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                                sh './jenkins/scripts/kill.sh'
+                            }
+                        }
+
+
     }
 }
