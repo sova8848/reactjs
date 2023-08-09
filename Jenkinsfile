@@ -17,15 +17,15 @@ pipeline {
         }
         stage('Test') {
                     steps {
-                        sh "chmod +x /var/lib/jenkins/workspace/react-app-poc/jenkins/scripts/test.sh"
+                        sh "chmod +x /var/lib/jenkins/workspace/reactjs/jenkins/scripts/test.sh"
                         sh './jenkins/scripts/test.sh'
                     }
                 }
                 stage('Deliver') {
                             steps {
                                // sh "chmod +x -R ${env.WORKSPACE}"
-                                sh 'chmod +x /var/lib/jenkins/workspace/react-app-poc/jenkins/scripts/deliver.sh'
-                                sh 'chmod +x /var/lib/jenkins/workspace/react-app-poc/jenkins/scripts/kill.sh'
+                                sh 'chmod +x /var/lib/jenkins/workspace/reactjs/jenkins/scripts/deliver.sh'
+                                sh 'chmod +x /var/lib/jenkins/workspace/reactjs/jenkins/scripts/kill.sh'
                                 sh './jenkins/scripts/deliver.sh'
                                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                                 sh './jenkins/scripts/kill.sh'
