@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build": "webpack --mode production",
     "test:coverage": "react-scripts test --coverage",
     "lint" : "react-scripts lint",
     "eject": "react-scripts eject",
