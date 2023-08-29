@@ -21,7 +21,7 @@
     },
     "transformIgnorePatterns": [
       "/node_modules/",
-      "/src/App.test.js"
+      "**/src/App.test.js"  // Use double asterisks to match recursively
     ]
   },
   "devDependencies": {
