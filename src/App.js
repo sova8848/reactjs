@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-const logo = () => {
+const Logo = () => {
   return (
     <div>
       <img src="src/logo.svg" alt="Logo" />
@@ -26,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default { App, logo };
+export default { App, Logo };
