@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import logoSvg from './logo.svg';
+//import logoSvg from './logo.svg';
+const MyComponent = () => {
+  return (
+    <div>
+      <img src="src/logo.svg" alt="Logo" />
+    </div>
+  );
+};
+export default MyComponent;
+
 import './App.css';
 
 class App extends Component {
