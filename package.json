@@ -10,10 +10,21 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:coverage": "react-scripts test --coverage",
-    "lint" : "react-scripts lint",
+    "lint": "react-scripts lint",
     "eject": "react-scripts eject",
     "test": "jest",
     "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^27.2.4",
+    "jest": "^27.2.4"
   }
 }
