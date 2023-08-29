@@ -7,7 +7,6 @@ const MyComponent = () => {
     </div>
   );
 };
-export default MyComponent;
 
 import './App.css';
 
@@ -27,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default { App, MyComponent };
