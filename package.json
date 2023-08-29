@@ -21,7 +21,7 @@
     },
     "transformIgnorePatterns": [
       "/node_modules/",
-      "/src/App.test.js"  // Adjust the path to match your test file
+      "/src/App.test.js"
     ]
   },
   "devDependencies": {
