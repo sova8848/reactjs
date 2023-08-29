@@ -4,7 +4,7 @@
     "@babel/preset-env"
   ],
   "ignore": [
-    "**/*.svg,
+    "**/*.svg",
     "**/*.css"    
   ],
   "plugins": [
