@@ -3,7 +3,10 @@
     "@babel/preset-react",
     "@babel/preset-env"
   ],
-  "ignore": ["**/*.svg"],
+  "ignore": [
+    "**/*.svg,
+    "**/*.css"    
+  ],
   "plugins": [
     "@babel/plugin-syntax-jsx"
     // You can add more plugins here if needed
