@@ -18,7 +18,11 @@
   "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
-    }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/",
+      "/src/App.test.js"  // Adjust the path to match your test file
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
