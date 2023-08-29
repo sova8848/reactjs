@@ -8,7 +8,7 @@
     "**/*.css"    
   ],
   "plugins": [
-    "@babel/plugin-syntax-jsx"
-    // You can add more plugins here if needed
+    "@babel/plugin-syntax-jsx",
+    "transform-es2015-modules-commonjs"
   ]
 }
