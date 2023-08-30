@@ -1,31 +1,29 @@
-const React = require('react');
-const { Component } = require('react');
-require('./App.css'); // Importing CSS like this is specific to bundlers like Webpack
-
+import React, { Component } from 'react';
+import './App.css';
 const Logo = () => {
   return (
-    React.createElement('div', null,
-      React.createElement('img', { src: 'src/logo.svg', alt: 'Logo' })
-    )
+    <div>
+      <img src="src/logo.svg" alt="Logo" />
+    </div>
   );
 };
+
+
 
 class App extends Component {
   render() {
     return (
-      React.createElement('div', { className: 'App' },
-        React.createElement('header', { className: 'App-header' },
-          React.createElement('img', { src: Logo(), className: 'App-logo', alt: 'logo' }),
-          React.createElement('h1', { className: 'App-title' }, 'Welcome to React')
-        ),
-        React.createElement('p', { className: 'App-intro' },
-          'To get started, edit ',
-          React.createElement('code', null, 'src/App.js'),
-          ' and save to reload.'
-        )
-      )
+      <div className="App">
+        <header className="App-header">
+          <img src={Logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
     );
   }
 }
 
-module.exports = { App, Logo };
+export default { App, Logo };
