@@ -20,15 +20,21 @@
       "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
     },
     "moduleFileExtensions": [
-    "js",
-    "jsx",
-    "json",
-    "node"
-  ],
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
     "transformIgnorePatterns": [
       "/node_modules/",
       "^.+\\.jsx?$",
       ".*\\.test\\.jsx?$"
+    ],
+    "testMatch": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)",
+        "**/__tests__/**/*.[jt]mjs?(x)",
+        "**/?(*.)+(spec|test).[jt]mjs?(x)"
     ]
   },
   "devDependencies": {
