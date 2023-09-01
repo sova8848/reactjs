@@ -11,6 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "react-scripts lint",
+    "lint": "eslint src",
     "eject": "react-scripts eject",
     "test": "jest",
     "test:coverage": "jest --coverage"
